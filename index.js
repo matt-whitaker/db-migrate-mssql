@@ -387,7 +387,7 @@ var MssqlDriver = Base.extend({
 
     function setType () {
       if (columnSpec.type !== undefined) {
-        var using =
+        var _using =
           columnSpec.using !== undefined
             ? columnSpec.using
             : util.format(
@@ -405,7 +405,7 @@ var MssqlDriver = Base.extend({
           columnName,
           this.mapDataType(columnSpec.type),
           len,
-          using
+          _using
         );
         return this.runSql(sql);
       }
